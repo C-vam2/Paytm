@@ -49,7 +49,9 @@ export const authOptions:AuthOptions={
     secret:process.env.JWT_SECRET || "SECRET",
     callbacks:{
         async session({token,session}:any){
-            session.user.id = token.id;
+            console.log("Hello from callback",session,token);
+            session.user.id = token.sub
+            console.log("after from callback",session);
             return session;
         }
     }
