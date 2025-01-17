@@ -4,9 +4,10 @@ export const BalanceCard=({amount,locked}:{
     amount:number;
     locked:number;
 })=>{
+    const style:string="flex justify-between py-1 text-sm font-semibold";
     return (
         <Card title={'Balance'}>
-            <div className="">
+            <div className={style}>
                 <div>
                     Unlocked balance
                 </div>
@@ -14,7 +15,8 @@ export const BalanceCard=({amount,locked}:{
                     {amount / 100} INR
                 </div>
             </div>
-            <div className="">
+            <hr/>
+            <div className={style}>
                 <div>
                     Total Locked Balance
                 </div>
@@ -22,14 +24,16 @@ export const BalanceCard=({amount,locked}:{
                     {locked/100} INR
                 </div>
             </div>
-            <div className="">
+            <hr/>
+            <div className={style}>
                 <div>
                     Total Balance
                 </div>
                 <div>
-                    {(locked+amount)/100}INR
+                    {(locked+amount)/100} INR
                 </div>
             </div>
+            <hr/>
         </Card>
     )
 }

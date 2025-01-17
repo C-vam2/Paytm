@@ -39,16 +39,16 @@ export default async function TransferPage() {
     const balance = await getBalance();
     const transactions = await getOnRampTransactions();
     return <div>
-        <div className="">
-            Transfer
+        <div className="m-5 flex justify-stretch text-[#6a51a6] font-bold text-5xl">
+            Transfers
         </div>
-        <div className="">
-            <div>
+        <div className="flex">
+            <div className=" w-[50%] m-5">
                 <AddMoney/>
             </div>
-            <div>
+            <div className="w-[50%] gap-5 m-5">
                 <BalanceCard amount={balance.amount} locked={balance.locked}/>
-                <div className="pt-4">
+                <div className="pt-4 ">
                     <OnRampTransactions transactions={transactions}/>
                 </div>
             </div>
