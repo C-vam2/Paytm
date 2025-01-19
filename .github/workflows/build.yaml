@@ -1,6 +1,10 @@
-name: Build on push and pull requests
+name: Build on PR and Push
 
 on:
+  push:
+    branches:
+      - master
+      - main
   pull_request:
     branches:
       - master
