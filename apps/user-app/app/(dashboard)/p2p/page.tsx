@@ -5,6 +5,8 @@ import SendCard from "../../../components/sendCard";
 import { authOptions } from "../../lib/auth";
 import prisma from "@repo/db/client";
 
+
+
 async function getSentTransaction() {
     const session = await getServerSession(authOptions);
     const data = await prisma.p2pTransfer.findMany({
