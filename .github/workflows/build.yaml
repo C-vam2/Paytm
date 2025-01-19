@@ -1,6 +1,10 @@
 name: Build on PR
 
 on:
+  push:
+    branches:
+      - master
+      - main
   pull_request:
     branches:
       - master
